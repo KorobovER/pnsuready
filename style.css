@@ -1,0 +1,105 @@
+
+[v-cloak] {
+    display: none;
+}
+
+.fas, .far {
+    font-size: 20px;
+}
+
+.fa-plus {
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
+}
+
+.fa-pencil-alt {
+    transition-duration:.3s;
+    transition-property: transform, color;
+    transition-timing-function: ease-in;
+}
+
+button:hover .fa-pencil-alt {
+    transform: rotate(-10deg);
+    color:lightgreen;
+}
+
+button:hover .fa-plus {
+    transform: rotate(180deg);
+}
+
+.fa-trash-alt {
+    transition-duration:.3s;
+    transition-property: transform, color;
+    transition-timing-function: ease-in;
+}
+
+button:hover .fa-trash-alt {
+    transform: rotate(-10deg);
+    color: #ff253a;
+}
+
+.fa-arrow-up, .fa-arrow-down {
+    transition-duration:.3s;
+    transition-property: color, transform;
+    transition-timing-function: ease-in;
+    
+}
+
+button:hover .fa-arrow-up, button:hover .fa-arrow-down {
+    color:lightgreen;
+    transform: rotate(10deg);
+}
+
+* {
+    transition: 1s;
+}
+
+.todo {
+    opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+    transition: 1s; /*Скорость перехода состояния элемента*/
+    animation: show 1s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+}
+
+@keyframes show{
+    0%{
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.title {
+    animation-iteration-count: infinite;
+    animation-name: title;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes title {
+    0% {
+        color: black;
+    }
+    50% {
+        color: pink;
+    }
+    100% {
+        color: black;
+    }
+}
+
+.list-enter-active,
+.list-leave-active {
+    transition: all .5s ease-in;
+}
+.list-enter-from,
+.list-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.form-check-input {
+    transition: none;
+}
